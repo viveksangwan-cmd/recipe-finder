@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+.App{
+    background-color: #CCF600;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-header{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px+2vmin);
+}
+.Wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ }
+
+.Ingredient{
+    width: 150px;
+    height: 200px;
+    border-radius: 8px;
+    background-color: #DAFB3F;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    transition: 0.3s;
+}
+.Ingredient:hover{
+    width: 160px;
+    height: 210px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Ingredient img{
+    height: 80px;
+    width: 100px;
+    border-radius: 10px;
+    margin: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Ingredient p{
+    margin: 0;
+    font-size: 10px;
+}
+.Ingredient span{
+    font-size: 14px;
 }
 
-.App-link {
-  color: #61dafb;
+.Steps{
+    top: 30px;
+    transition: 0.3s;
+    opacity: 0;
+    background-color: #85A000;
+    visibility: hidden;
+    overflow-y: scroll;
+    position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Steps p{
+    font-size: 12.5px;
+}
+
+.Ingredient:hover .Steps{
+    visibility: initial;
+    top: 0px;
+    opacity: 1;
+}
+
+.InputWrapper input{
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+    border: 0px;
+    background-color: #E3FB71;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+.InputWrapper button{
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
 }
