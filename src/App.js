@@ -32,6 +32,7 @@ function App() {
       })
       .catch(error => {
         console.log('Error : ', error);
+        console.log('Error url : ', url);
         setLoading(false);
       })
   }
